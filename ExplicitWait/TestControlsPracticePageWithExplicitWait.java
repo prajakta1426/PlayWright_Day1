@@ -22,14 +22,11 @@ public class TestControlsPracticePageWithExplicitWait {
             int intialrowCount = rows.count();
             System.out.println("Intial Count "+intialrowCount);
 
-
             Locator moduleDropdown = page.locator("#module");
             moduleDropdown.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
 
             moduleDropdown.selectOption(new SelectOption().setLabel("CCST"));
             System.out.println("Selected 'CCST' from dropdown");
-
-
             rows.first().waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
 
             int updatedCount = rows.count();
