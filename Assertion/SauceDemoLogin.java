@@ -11,6 +11,7 @@ public class SauceDemoLogin {
     static String css_loginButton="input[type='submit'][value='Login']";
     static String id_username ="#user-name";
     static String id_password = "#password";
+
     public static void main(String[] args) {
         try(Playwright obj_playwright = Playwright.create())
         {
